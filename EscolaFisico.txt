@@ -31,3 +31,55 @@ create table leciona (idLeciona int primary key auto_increment, fk_Disciplina_co
 alter table leciona add constraint fkdis2 foreign key (fk_Disciplina_cod_disciplina) references disciplina (cod_disciplina);
 
 alter table leciona add constraint fkpro foreign key (fk_Professor_matricula) references professor (matricula);
+
+------------------------------------------------------------------ Day 3
+
+insert into aluno values ( null, 'Ana Carolina', '2001-07-11', '123.456.789-04', 'Maria Carolina', 'ac@email.com');
+
+insert into aluno ( matricula, nome, nascimento, cpf, responsavel, email ) values ( null, 'Elias Sherman', '1995-03-02', '123.456.789-05', 'John Sherman', 'es@email.com' );
+
+insert into aluno ( nome, cpf, responsavel ) values ( 'Waldiney Mouse', '123.456.789-06', 'Wesley Keyboard' );
+
+insert into aluno ( cpf, matricula, nome, responsavel, email ) values ( '123.456.789-07', null, 'Genivaldo Williams', 'Clotilde Williams', 'gw@email.com' );
+
+insert into turma values ( 2023080, 'M', 'Técnico de Informática' );
+
+insert into turma values ( 2023090, 'T', 'Técnico em Comunicação Visual' );
+
+insert into estuda values ( 7501, 3001, 2023090 );
+
+insert into estuda values ( null, 3005, 2023080 );
+
+insert into estuda values ( null, 3004, 2023090 );
+
+insert into estuda values ( null, 3004, 2023080 );
+
+insert into estuda values ( null, 3006, 2023090 );
+
+insert into estuda values ( null, 3007, 2023090 );
+
+-----
+
+insert into disciplina values ( 101, 'programacao' );
+
+insert into disciplina values ( 102, 'redes' );
+
+insert into disciplina values ( 103, 'tratamento de imagem' );
+
+insert into professor values (0123, 'Sérgio', 'TI');
+
+insert into professor values (0124, 'Vicente', 'TI');
+
+insert into professor values (0125, 'Flávia', 'Tec Com Visual');
+
+insert into possui values ( 123, 101, 2023080 );
+
+insert into possui values ( null, 102, 2023080 );
+
+insert into possui values ( null, 103, 2023090 );
+
+insert into leciona values ( 601, 101, 123 );
+
+insert into leciona values ( null, 102, 124 );
+
+insert into leciona values ( null, 103, 125 );
